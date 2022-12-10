@@ -4,7 +4,7 @@ export const CommandCell = ( props ) => {
   const inEdit = dataItem[props.editField];
   const isNewItem = dataItem.id === undefined;
   return inEdit ? (
-    <td className="k-command-cell ">
+    <td className="k-command-cell  k-grid-content-sticky ">
       <button
         className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-grid-save-command"
         onClick={() =>
@@ -23,7 +23,7 @@ export const CommandCell = ( props ) => {
       </button>
     </td>
   ) : (
-    <td className="k-command-cell ">
+    <td className="k-command-cell k-grid-content-sticky  ">
       <button
         className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary k-grid-edit-command"
         onClick={() => props.edit( dataItem )}
